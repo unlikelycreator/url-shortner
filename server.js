@@ -2,14 +2,22 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const shortid = require('shortid');
+const cors = require('cors');
 
 const app = express();
 const PORT = 8082; // Change if needed
-const BASE_URL = 'https://midastouch.onrender.com'; // Your API’s base URL (update for deployment)
+const BASE_URL = 'https://midastouch.onrender.com'; // Your API’s base URL
 const JSON_FILE = path.join(__dirname, 'urls.json');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+// Configure CORS to allow all origins, with specific origins listed
+app.use(cors({
+    origin: ['http://localhost:5173', 'http://198.38.87.73:8085', '*'], // Allow specific origins and all (*)
+    methods: ['GET', 'POST'], // Allow only GET and POST methods
+    allowedHeaders: ['Content-Type'], // Allow Content-Type header
+}));
 
 // Initialize JSON file if it doesn’t exist
 async function initializeJsonFile() {
