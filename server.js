@@ -5,7 +5,7 @@ const shortid = require('shortid');
 
 const app = express();
 const PORT = 8082; // Change if needed
-const BASE_URL = 'http://198.38.87.73:8082'; // Your API’s base URL (update for deployment)
+const BASE_URL = 'https://midastouch.onrender.com'; // Your API’s base URL (update for deployment)
 const JSON_FILE = path.join(__dirname, 'urls.json');
 
 // Middleware to parse JSON bodies
