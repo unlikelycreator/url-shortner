@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const app = express();
 const PORT = 8082; // Change if needed
-const BASE_URL = 'https://midastouch.onrender.com'; // Your API’s base URL
+const BASE_URL = 'https://midastouch.up.railway.app'; // Your API’s base URL
 const JSON_FILE = path.join(__dirname, 'urls.json');
 
 // Middleware to parse JSON bodies
