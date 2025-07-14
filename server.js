@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Configure CORS to allow all origins, with specific origins listed
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://198.38.87.73:8085', '*', 'http://103.118.16.25'], // Allow specific origins and all (*)
+    origin: ['http://localhost:5173', 'http://198.38.87.73:8085', '*', 'http://103.118.16.25', "http://103.118.16.25:8081"], // Allow specific origins and all (*)
     methods: ['GET', 'POST'], // Allow only GET and POST methods
     allowedHeaders: ['Content-Type'], // Allow Content-Type header
 }));
